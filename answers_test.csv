@@ -1,0 +1,11 @@
+﻿id, question_id, body, date_written, answerer_name, answerer_email, reported, helpful
+1,1,"Supposedly suede, but I think its synthetic",1/17/2018,sillyguy,first.last@gmail.com,0,1
+2,1,"Some kind of recycled rubber, works great!",3/18/2019,marcanthony,first.last@gmail.com,0,2
+3,2,"Some kind of recycled rubber, works great!",3/18/2018,iluvdogz,first.last@gmail.com,0,3
+4,2,No,8/8/2018,Seller,first.last@gmail.com,0,4
+5,3,Something pretty soft but I can't be sure,1/4/2018,metslover,first.last@gmail.com,0,5
+6,3,I wouldn't machine wash it,1/17/2019,warmkid,first.last@cbs.com,1,6
+7,4,Its the best! Seriously magic fabric,1/4/2018,metslover,first.last@gmail.com,0,7
+8,4,DONT BUY IT! It's bad for the environment,1/4/2018,metslover,first.last@gmail.com,0,8
+9,5,Only if you want to ruin it!,1/17/2019,warmkid,first.last@cbs.com,1,9
+10,5,I've thrown it in the wash and it seems fine,1/4/2017,skilover,first.last@cbs.com,0,1

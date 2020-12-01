@@ -1,0 +1,11 @@
+﻿id, product_id, body, date_written, asker_name, asker_email, reported, helpful
+1,1,What fabric is the top made of?,1/4/2018,yankeelover,first.last@gmail.com,0,1
+2,1,HEY THIS IS A WEIRD QUESTION!!!!?,4/28/2019,jbilas,first.last@gmail.com,1,4
+3,1,Does this product run big or small?,1/17/2019,jbilas,first.last@gmail.com,0,8
+4,1,How long does it last?,7/6/2019,funnygirl,first.last@gmail.com,0,6
+5,1,Can I wash it?,2/8/2018,cleopatra,first.last@gmail.com,0,7
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
