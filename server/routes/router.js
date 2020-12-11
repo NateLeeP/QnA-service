@@ -1,11 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const { findQuestion, findAnswers, reportQuestion, reportAnswer, markQuestionHelpful, markAnswerHelpful, addQuestion, addAnswer } = require('./../db/controllers.js');
+const { redisClient, getPromise } = require('./../db/db.js');
 
-router.get('/questions', (req, res) => {
+// Cache middleware: Is there a better way to organize this in code?
+function cache(req, res, next) {
+  const { product_id } = req.query;
+  console.log('Checking cache!')
+  getPromise(product_id)
+  .then((results) => {
+    if (results != null) {
+      res.json(JSON.parse(results));
+    } else {
+      next();
+    }
+  })
+  .catch((err) => {
+    console.log('Error in middleware cache!! Error: ', err);
+  })
+};
+
+
+router.get('/questions', cache, (req, res) => {
+
   findQuestion(req, res)
   .then((results) => {
+
     const resultsObj = {product_id: req.query.product_id, results: results}
+    // Save to redis database on return. Will stringify cause issues?
+    redisClient.set(req.query.product_id, JSON.stringify(resultsObj));
     res.json(resultsObj);
   })
   .catch((err) => {
