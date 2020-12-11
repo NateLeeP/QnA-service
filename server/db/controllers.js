@@ -1,5 +1,7 @@
 const { Question, Sequence } = require('./db.js');
 
+
+
 const findQuestion = (req, res) => {
   const product_id = Number(req.query.product_id);
   const page = req.query.page === undefined ? 1 : req.query.page;
