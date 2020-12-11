@@ -6,7 +6,6 @@ const { redisClient, getPromise } = require('./../db/db.js');
 // Cache middleware: Is there a better way to organize this in code?
 function cache(req, res, next) {
   const { product_id } = req.query;
-  console.log('Checking cache!')
   getPromise(product_id)
   .then((results) => {
     if (results != null) {
