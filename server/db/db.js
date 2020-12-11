@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 const { username, password, dbURL } = require('./../../db_config.js');
 const connectionURL = `mongodb://${username}:${password}@${dbURL}/QnA`;
+/*
+Connect to redis
+*/
+const redis = require('redis');
+const redisClient = redis.createClient();
+const { promisify } = require("util");
+const getPromise = promisify(redisClient.get).bind(redisClient);
 
-//mongoose.connect('mongodb://localhost/SDC_Test');
+//mongoose.connect('mongodb://localhost/QnA');
 
 mongoose.connect(connectionURL);
 
@@ -12,6 +19,12 @@ db.on('error', () => {console.log('Error! Connection error')});
 db.once('open', () => {
   console.log('Successfully connected to database');
 })
+
+
+
+redisClient.on("connect", (connect) => {
+  console.log('connect!!');
+});
 
 const answerSchema = new mongoose.Schema({
   answer_id: Number,
@@ -48,3 +61,5 @@ const Sequence = mongoose.model('Sequence', sequenceSchema);
 exports.db = db;
 exports.Question = Question;
 exports.Sequence = Sequence;
+exports.redisClient = redisClient;
+exports.getPromise = getPromise;
