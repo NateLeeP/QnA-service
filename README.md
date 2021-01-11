@@ -18,6 +18,12 @@ npm install
 npm start
 ````
 
+## Technologies
+Node / Express
+MongoDB
+Docker
+AWS EC2 
+Redis
 
 [Loader.io](https://loader.io/) used to test services ability to handle higher levels of throughput. 
 
