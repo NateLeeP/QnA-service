@@ -1,0 +1,6 @@
+.gitignore
+answers_photos_test.csv
+answers_test.csv
+questions_test.csv
+README.md
+node_modules
