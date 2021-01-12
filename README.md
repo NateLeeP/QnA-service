@@ -10,13 +10,22 @@ A team of three completed this project, with each individual responsible for a d
 
 After cloning repository, the following commands will start the service running at localhost:3000
 
+To install necessary dependencies:
+
 ````
 npm install
 ````
 
+To start service:
 ````
 npm start
 ````
+
+To start redis database via docker
+```
+docker run -p 6379:6379 -d redis
+```
+
 
 ## Technologies
 Node / Express
