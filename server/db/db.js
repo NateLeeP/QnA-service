@@ -5,7 +5,8 @@ const connectionURL = `mongodb://${username}:${password}@${dbURL}/QnA`;
 Connect to redis
 */
 const redis = require('redis');
-const redisClient = redis.createClient();
+const redisClient = redis.createClient({"host": "localhost", "port": 6379}); // I had 'some-redis' as host before changing it... Did this have something to do with docker?
+
 const { promisify } = require("util");
 const getPromise = promisify(redisClient.get).bind(redisClient);
 
