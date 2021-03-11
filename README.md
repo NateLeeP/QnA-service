@@ -59,6 +59,6 @@ PUT /qa/answers/:answer_id/helpful: Updates an answer to show it was found helpf
 PUT /qa/answers/:answer_id/report: Updates an answer to show it has been reported. Note, this action does not delete the answer, but the answer will not be returned in the above GET request.
 
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7703442e-1f3b-4714-ab8d-dc775cf3601c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210111%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210111T023321Z&X-Amz-Expires=86400&X-Amz-Signature=f9942c6e392c094dde9e9c6857378d7d7034635e8267bce122348a808d59f70a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" />
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/66708709-1914-407b-954d-f0614afb6597/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210311%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210311T141452Z&X-Amz-Expires=86400&X-Amz-Signature=db801824f0cca981e1bb2aac351e4c3f5d9fcbc9adb70c298d4b2e3cc21d4638&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22" />
 <br></br>
 *Results from 1500 client request/second, testing product ids at from 1:100*
